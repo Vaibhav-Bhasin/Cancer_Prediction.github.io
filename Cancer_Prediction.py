@@ -18,3 +18,14 @@ clf = DecisionTreeClassifier()
 
 #4 train the model 
 clf = clf.fit(train_features,train_outcomes)
+#5 prediction
+p1 = clf.predict(test_features)
+from sklearn.metrics import accuracy_score
+print("Accuracy::",accuracy_score(test_outcomes,p1)*100, "%")
+import matplotlib.pyplot as plt
+fig = plt.figure()
+ax= fig.add_axes([0,0,1,1])
+modles =["DecisionTree","XYZ","ABC"]
+accuracy =[89,88,90]
+plt.bar(modles,accuracy)
+plt.show()
