@@ -15,3 +15,6 @@ train_features, test_features, train_outcomes, test_outcomes = train_test_split(
 #3 choose the model
 from sklearn.tree import DecisionTreeClassifier
 clf = DecisionTreeClassifier()
+
+#4 train the model 
+clf = clf.fit(train_features,train_outcomes)
